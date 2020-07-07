@@ -1,4 +1,12 @@
-# Checks if the number entered is a properly formatted phone number
+# Regular Expression code VS non Regex code for finding a phone number
+
+import re
+message = 'Call me at 415-555-1234 tomorrow, or at 415-555-9999 the next day.'
+
+phone_num_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+print(phone_num_regex.findall(message))
+
+# ================================================================
 
 def is_phone_number(text): # 415-555-1234
     if len(text) != 12:
@@ -18,4 +26,13 @@ def is_phone_number(text): # 415-555-1234
                 return False  # Missing last 4 digits
         return True
 
-print(is_phone_number('415-555-1234'))
+
+message = 'Call me at 415-555-1234 tomorrow, or at 415-555-9999 the next day.'
+foundNumber = False
+for i in range (len(message)):
+    chunk = message[i:i+12]
+    if is_phone_number(chunk):
+        print('Phone number found: ' + chunk)
+        foundNumber = True
+if not foundNumber:
+    print('Could not find any phone numbers.')
