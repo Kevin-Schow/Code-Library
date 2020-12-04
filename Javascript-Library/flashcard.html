@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+	<head>
+		<title>✨ 𝙵𝚕𝚊𝚜𝚑 𝙲𝚊𝚛𝚍𝚜 ✨</title>
+	<script src="myscript.js"></script>
+	</head>
+
+	<!-- Body -->
+	<body>
+		<br/>
+		<center>
+			<h1>🧩 🔲🔳 ✨ 𝙺𝚎𝚟𝚒𝚗 𝚂𝚌𝚑𝚘𝚠 ✨ 🔳🔲 🌌</h1>
+
+<!-- Known Languages -->
+			<script>
+				var knownLanguages = ["𝙹𝚊𝚟𝚊𝚜𝚌𝚛𝚒𝚙𝚝", "𝙿𝚢𝚝𝚑𝚘𝚗", "𝙲++", "𝙲#", "𝙷𝚃𝙼𝙻", "𝙲𝚂𝚂"]
+				var emojiLanguages = ["✨", "🧙", "👨‍💻", "🎲", "🕹️", "🌒", "🔥"]
+
+				for (i=0; i<knownLanguages.length; i++){
+					// Add Emojis
+					if (i<emojiLanguages.length){
+						document.write("  " + emojiLanguages[i] + " ")
+					}
+					document.write(" • " + knownLanguages[i] + " • ")
+					}
+				document.write("  " + emojiLanguages[i])
+			</script>
+
+			<h2>🧮 ▫️◾️ ➕ 𝙵𝚕𝚊𝚜𝚑 𝙲𝚊𝚛𝚍𝚜 ➗ ◽️▪️ 🔢</h2>
+
+			<script>
+				//Objects (Python Dictionary)
+				var person = {
+					firstName:"𝙺𝚎𝚟𝚒𝚗",
+					lastName:"Schow",
+					Age:26
+				}
+				
+				document.write("<br/>")
+				document.write("<br/>")
+				document.write("<br/>")
+
+				document.write(hello(person.firstName))
+			</script>
+
+
+<br/><br/><br/><br/><br/>
+
+
+<!-- Flash Cards -->
+		<h2 id="flashcard">
+			<script>
+				var numOne = Math.floor(Math.random() * 10)+1
+				var numTwo = Math.floor(Math.random() * 10)+1
+				var correctAnswer = numOne + numTwo;
+
+				document.write(numOne + " + " + numTwo);
+
+			</script>
+		</h2>
+
+		<h3>
+			<input id="answer">
+			<button type="button" onclick="addition()">Submit</button>
+			<input type="button" value = "New Card" onclick="newCard()">
+			<br/><br/>
+			<p id="output"></p>
+
+		</h3>
+
+
+
+	</body>
+</html>
