@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<title>✨ 𝙹𝚊𝚟𝚊𝚜𝚌𝚛𝚒𝚙𝚝 ✨</title>
+	<script src="myscript.js"></script>
 	</head>
 
 	<!-- Body -->
@@ -24,18 +25,21 @@
 				document.write("  " + emojiLanguages[i])
 			</script>
 
-		
 			<h2>🌜 ▫️◾️ 🏰 Home 👨🏻‍💻 ◽️▪️ 🌞</h2>
 
 			<script>
-				var firstName = "𝙺𝚎𝚟𝚒𝚗";
+				//Objects (Python Dictionary)
+				var person = {
+					firstName:"𝙺𝚎𝚟𝚒𝚗",
+					lastName:"Schow",
+					Age:26
+				}
 				
 				document.write("<br/>")
 				document.write("<br/>")
 				document.write("<br/>")
 
-				// Greeting
-				document.write("𝙷𝚎𝚕𝚕𝚘 " + firstName)
+				document.write(hello(person.firstName))
 
 				document.write("<br/>")
 				document.write("<br/>")
