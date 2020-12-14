@@ -1,35 +1,109 @@
 //identity(x) ⇒ any
 //Write a function identity that takes an argument and returns that argument
 
+identity = (x) => {
+	return x;
+}
+
 //addb(a, b) ⇒ number
 //Write a binary function addb that takes two numbers and returns their sum
+
+addb = (a, b) => {
+	return a + b;
+}
 
 //subb(a, b) ⇒ number
 //Write a binary function subb that takes two numbers and returns their difference
 
+subb = (a, b) => {
+	return a - b;
+}
+
 //mulb(a, b) ⇒ number
 //Write a binary function mulb that takes two numbers and returns their product
+
+mulb = (a, b) => {
+	return a * b;
+}
 
 //minb(a, b) ⇒ number
 //Write a binary function minb that takes two numbers and returns the smaller one
 
+minb = (a, b) => {
+	if a > b:
+		return b;
+	else if a < b:
+		return a;
+}
+
 //maxb(a, b) ⇒ number
 //Write a binary function maxb that takes two numbers and returns the larger one
+
+maxb = (a, b) => {
+	if a > b:
+		return a;
+	else if a < b:
+		return b;
+}
 
 //add(...nums) ⇒ number
 //Write a function add that is generalized for any amount of arguments
 
+function add() {
+	var sum = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		sum += arguements[i];
+	}
+	return sum;
+}
+
 //sub(...nums) ⇒ number
 //Write a function sub that is generalized for any amount of arguments
+
+function sub() {
+	var sum = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		sum -= arguements[i];
+	}
+	return sum;
+}
 
 //mul(...nums) ⇒ number
 //Write a function mul that is generalized for any amount of arguments
 
+function mul() {
+	var sum = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		sum *= arguements[i];
+	}
+	return sum;
+}
+
 //min(...nums) ⇒ number
 //Write a function min that is generalized for any amount of arguments
 
+function min() {
+	var min;
+	for (var i = 0; i < arguments.length; i++) {
+		if (arguments[i] < min) {
+			min = arguements[i];
+		}
+	}
+	return min;
+}
+
 //max(...nums) ⇒ number
 //Write a function max that is generalized for any amount of arguments
+
+function max() {
+	var max;
+	for (var i = 0; i < arguments.length; i++) {
+		if (arguments[i] > max) {
+			min = arguements[i];
+		}
+	}
+	return max;
+}
 
 //addRecurse(...nums) ⇒ number
 //Write a function addRecurse that is the generalized add function but uses recursion
@@ -45,6 +119,14 @@
 
 //not(func) ⇒ function
 //Write a function not that takes a function and returns the negation of its result
+
+function not(func) {
+	if(func == true) {
+		return false
+	} else if(func == false) {
+		return true
+	}
+}
 
 //acc(func, initial) ⇒ function
 //Write a function acc that takes a function and an initial value and returns a function that runs the initial function on each argument, accumulating the result
