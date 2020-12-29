@@ -69,7 +69,7 @@ body::after
 	text-align: center;
 	transform: translateY(100px);
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.9s;
 }
 .container .card:hover .content
 {
