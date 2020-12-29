@@ -4,11 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="particles.css">
+	<title>Liquid CSS Buttons</title>
+	<script src="https://use.fontawesome.com/7f975d9008.js"></script>
+	<link rel="stylesheet" href="liquidButtons.css">
+	
+	
+
 </head>
 <body>
-	<canvas id="canvas1"></canvas>
-	<script scr="particles.js"></script>
+	<h1>CSS Buttons - Liquid Effect</h1>
+	<div class="button">
+		<i class="fas fa-cat">🧬</i>
+			<div class="blurred">
+				<span></span>
+				<span></span>
+			</div>
+	</div>
+	<svg>
+		<defs>
+			<filter id='goo'>
+				<feGaussianBlur in='SourceGraphic'
+				stdDeviation='10' result='name'/>
+				<feColorMatrix in='name' mode='matrix'
+					values='1 0 0 0 0
+							0 1 0 0 0
+							0 0 1 0 0
+							0 0 0 30 -15' result='aab'/>
+				<feBlend in='SourceGraphic' in2='aab'/>
+			</filter>
+		</defs>
+	</svg>
 </body>
-</html>
