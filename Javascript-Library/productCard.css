@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Jura', sans-serif;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-heightL 100vh;
+	background: #131313;
+}
+.container
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 1200px;
+	transform-style: preserve-3d;
+}
+.container .card
+{
+	position: relative;
+	width: 225px;
+	height: 375px;
+	margin: 20px;
+	background: #232323;
+	border-radius: 12px;
+}
+.container .card::before
+{
+	content: 'Ability';
+	position: absolute;
+	top: 245px;
+	left: 20px;
+	margin: 10px;
+	font-size: 2em;
+	font-weight: 900;
+	color: #fff;
+	font-style: italic;
+	opacity: 0;
+	transition: 0.5s;
+}
+.container .card::after
+{
+	content: 'Text text text text text text text text text text text text text text text';
+	position: absolute;
+	top: 290px;
+	right: 20px;
+	margin: 10px;
+	font-size: 1em;
+	font-weight: 900;
+	color: #fff;
+	font-style: italic;
+	opacity: 0;
+	transition: 0.5s;
+}
+.container .card:hover::before,
+.container .card:hover::after
+{
+	opacity: 0.04;
+}
+.container .card .name
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	transform-style: preserve-3d;
+	transform: translate3d(0, 0, 75px);
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+}
+.container .card:hover .name
+{
+	top: 40px;
+	opacity: 1;
+}
+.container .card .buy
+{
+	position: absolute;
+	bottom: 0; /*swap to top to make card title*/
+	left: 50%;
+	transform-style: preserve-3d;
+	transform: translate3d(-50%, 0, 75px);
+	color: #fff;
+	background: #333;
+	padding: 10px 20px;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+}
+.container .card:hover .buy
+{
+	bottom: 40px; /*swap to top to make card title*/
+	opacity: 1;
+}
+.container .card .circle
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	transition: 0.5s;
+	background: #fff;
+	transform-style: preserve-3d;
+	z-index: 10;
+	opacity: 0;
+	transform: translate3d(-50%, -50%, 50px);
+}
+.container .card .product
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 500px;
+	transition: 0.5s;
+	z-index: 11;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transform: translate3d(-50%, -50%, 0px) rotate(0deg);
+}
+.container .card:hover .product
+{
+	transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .buy
+{
+	background: #379bf7;
+}
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .buy
+{
+	background: #9bdc28;
+}
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .buy
+{
+	background: #fb4b4f;
+}
