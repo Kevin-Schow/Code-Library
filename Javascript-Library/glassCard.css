@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Jura:200,300,400,500,600,700,800,900&display=swap');
 *
 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Jura', sans-serif;
 }
 body
 {
@@ -49,19 +49,21 @@ body::after
 .container .card
 {
 	position: relative;
-	width: 200px;
-	height: 400px;
-	margin: 30px;
+	width: 225px;
+	height: 375px;
+	margin: 20px;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 	border-radius: 15px;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.08);
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: 1px solid rgba(255, 255, 255, 0.5);
-	border-left: 1px solid rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(5px);
+	border-top: 1px solid rgba(255, 255, 255, 0.45);
+	border-left: 1px solid rgba(255, 255, 255, 0.45);
+	backdrop-filter: blur(14px);
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
 }
 .container .card .content
 {
@@ -82,20 +84,24 @@ body::after
 	top: -80%;
 	right: 30px;
 	font-size: 8em;
-	color: rgba(255, 255, 255, 0.05);
+	color: rgba(255, 255, 255, 0.8);
 	pointer-events: none;
+	transform: translateZ(200px)
 }
 .container .card .content h3
 {
 	font-size: 1.8em;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.1);
 	z-index: 1;
+	transform: translateZ(1000px)
 }
 .container .card .content p
 {
 	font-size: 1em;
 	color: #fff;
 	font-weight: 300;
+	transform: translateZ(80px)
+
 }
 .container .card .content a
 {
@@ -109,4 +115,5 @@ body::after
 	text-decoration: none;
 	font-weight: 500;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	transform: translateZ(200px)
 }
