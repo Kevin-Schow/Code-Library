@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>3D Product Card</title>
+	<link rel="stylesheet" href="spaceshipCard.css">
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<h2 class="name">Ship Name</h2>
+			<a href="#" class="buy">Buy Now</a>
+			<div class="circle"></div>
+			<img src="C:\code\Code-Library\images\img1.png" class="product">
+		</div>
+		<div class="card">
+			<h2 class="name">Ship Name</h2>
+			<a href="#" class="buy">Buy Now</a>
+			<div class="circle"></div>
+			<img src="C:\code\Code-Library\images\img2.png" class="product">
+		</div>
+		<div class="card">
+			<h2 class="name">Ship Name</h2>
+			<a href="#" class="buy">Buy Now</a>
+			<div class="circle"></div>
+			<img src="C:\code\Code-Library\images\img3.png" class="product">
+		</div>
+	</div>
+	<div class="planet"></div>
+	<script src="vanilla-tilt.js"></script>
+	<script>
+		VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 2000,
+		perspective: 400,
+		scale: 0.95
+	});
+	</script>
+</body>
+</html>
